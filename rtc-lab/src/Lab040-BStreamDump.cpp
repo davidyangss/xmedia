@@ -8,6 +8,7 @@
 #include <chrono>
 
 #include <stdio.h>
+#include <signal.h>
 
 #include <event2/bufferevent.h>
 #include <event2/buffer.h>
