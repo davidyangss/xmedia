@@ -1,0 +1,34 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.lock
+
+\.DS_Store
+
+\.idea/
+\.idea/**/*
+
+\.glide/
+\.glide/**/*
+
+
+cmake-build-release/
+
+rtc-lab/cmake-build-debug/
+

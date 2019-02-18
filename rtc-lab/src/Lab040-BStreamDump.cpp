@@ -20,14 +20,14 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 
-extern "C"{
-    #include "vpx/vpx_encoder.h"
-    #include "vpx/vp8cx.h"
-    #include "vpx/vpx_decoder.h"
-    #include "vpx/vp8dx.h"
-}
+//extern "C"{
+//    #include "vpx/vpx_encoder.h"
+//    #include "vpx/vp8cx.h"
+//    #include "vpx/vpx_decoder.h"
+//    #include "vpx/vp8dx.h"
+//}
 
-#include "SDLFramework.hpp"
+//#include "SDLFramework.hpp"
 #include "Lab040-BStreamDump.hpp"
 #include "XSocket.h"
 #include "xtlv_file.h"
@@ -856,21 +856,22 @@ void EventApp::on_http_req(struct evhttp_request *req, void *arg){
 
 
 int lab_bstream_dump_main(int argc, char* argv[]){
-    int ret = SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) ;
-    if(ret){
-        odbge( "fail too init SDL, err=[%s]", SDL_GetError());
-        return -1;
-    }
-    ret = TTF_Init();
+    int ret = 0;
+//    ret = SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) ;
+//    if(ret){
+//        odbge( "fail too init SDL, err=[%s]", SDL_GetError());
+//        return -1;
+//    }
+//    ret = TTF_Init();
     
     
     AppConfig cfg;
-    cfg.initWithIp("172.17.1.216");
+    cfg.initWithIp("172.17.2.130");
     EventApp app(cfg);
     app.run();
     
-    TTF_Quit();
-    SDL_Quit();
+//    TTF_Quit();
+//    SDL_Quit();
     return ret;
 }
 
