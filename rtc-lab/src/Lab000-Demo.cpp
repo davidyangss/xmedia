@@ -1546,23 +1546,23 @@ int lab_xswtlv_player_main(int argc, char* argv[]){
     }
     ret = TTF_Init();
     
-//    {
-//        //const char * filename = "/Users/simon/Downloads/tmp/tmp/raw-tlv/rtx-fec-01.tlv";
-//        //const char * filename = "/Users/simon/Downloads/tmp/tmp/raw-tlv/rtx-fec-02-nodrop.tlv";
-//        const char * filename = "/Users/simon/Downloads/tmp/tmp/raw-tlv/rtc-6000002.tlv";
-//        //const char * filename = "/Users/simon/Downloads/rtc-3896-aem-0.tlv";
-//
-//        //XSWTLVPlayer().play(filename);
-//        //XSWTLVProber().probe(filename);
-//
-//        const char * output_base = "/Users/simon/Downloads/tmp/tmp/raw-tlv/out";
-//        XSWTLVTransformatter().transformat(filename, output_base);
-//    }
-    
     {
-        NRTPPackTester("test").test("/Users/simon/Downloads/tmp/media/tt.webm");
-        //Media2XSWTlv("m2t ").transfmt("/Users/simon/Downloads/tmp/media/tt.webm", "/tmp/out.tlv");
+        //const char * filename = "/Users/simon/Downloads/tmp/tmp/raw-tlv/rtx-fec-01.tlv";
+        //const char * filename = "/Users/simon/Downloads/tmp/tmp/raw-tlv/rtx-fec-02-nodrop.tlv";
+        const char * filename = "/Users/yangss/Downloads/rtc-6000002.tlv";
+        //const char * filename = "/Users/simon/Downloads/rtc-3896-aem-0.tlv";
+
+        //XSWTLVPlayer().play(filename);
+        //XSWTLVProber().probe(filename);
+
+        const char * output_base = "/Users/yangss/Downloads/out";
+        XSWTLVTransformatter().transformat(filename, output_base);
     }
+    
+//    {
+//        NRTPPackTester("test").test("/Users/simon/Downloads/tmp/media/tt.webm");
+//        //Media2XSWTlv("m2t ").transfmt("/Users/simon/Downloads/tmp/media/tt.webm", "/tmp/out.tlv");
+//    }
     
     TTF_Quit();
     SDL_Quit();
